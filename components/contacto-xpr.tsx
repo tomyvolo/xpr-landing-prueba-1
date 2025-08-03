@@ -1,43 +1,12 @@
 "use client"
-
-import type React from "react"
 import XPRLogo from "@/components/xpr-logo"
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { MessageCircle, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import ContactoFormSimple from "@/components/contacto-form-simple"
 
 export default function ContactoXPR() {
-  const [formData, setFormData] = useState({
-    nombre: "",
-    email: "",
-    mensaje: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    // Simulación de envío
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-
-    // Reset form
-    setFormData({ nombre: "", email: "", mensaje: "" })
-    setIsSubmitting(false)
-
-    alert("¡Mensaje enviado correctamente! Te contactaremos pronto.")
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }))
-  }
-
   return (
     <section id="contacto" className="py-20 bg-gray-900 text-white relative overflow-hidden">
       {/* Background pattern */}

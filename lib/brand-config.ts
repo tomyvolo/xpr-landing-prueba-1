@@ -52,10 +52,10 @@ export const sportEmbassadors = {
 
 // Gradiente institucional que integra todos los colores deportivos
 export const institutionalGradient = `linear-gradient(90deg, 
-  ${brandColors.rugby} 0%, 
-  ${brandColors.basquet} 20%, 
-  ${brandColors.voley} 40%, 
-  ${brandColors.futbol} 60%, 
-  ${brandColors.hockey} 80%, 
-  ${brandColors.voley} 100%
+${brandColors.rugby} 0%, 
+${brandColors.basquet} 20%, 
+${brandColors.voley} 40%, 
+${brandColors.futbol} 60%, 
+${brandColors.hockey} 80%, 
+${brandColors.voley} 100%
 )`

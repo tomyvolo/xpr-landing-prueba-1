@@ -115,11 +115,9 @@ export default function DeporteLanding({ sport, onBack }: DeporteLandingProps) {
 
       {/* Banner principal - más compacto */}
       <section className="relative h-64 overflow-hidden">
-        <img
-          src={currentSport.image || "/placeholder.svg"}
-          alt={currentSport.title}
-          className="w-full h-full object-cover"
-        />
+        <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-600 font-bold text-2xl">
+          {currentSport.title}
+        </div>
         <div className="absolute inset-0 opacity-60" style={{ backgroundColor: currentSport.ambassador.color }} />
         <div className="absolute inset-0 flex items-center justify-center text-white text-center">
           <div>
@@ -150,11 +148,9 @@ export default function DeporteLanding({ sport, onBack }: DeporteLandingProps) {
                 </div>
               </div>
               <div className="text-center">
-                <img
-                  src="/placeholder.svg?height=200&width=200&text=Embajador"
-                  alt={currentSport.ambassador.name}
-                  className="w-48 h-48 rounded-full mx-auto mb-3 object-cover shadow-lg"
-                />
+                <div className="w-48 h-48 rounded-full mx-auto mb-3 bg-gray-200 flex items-center justify-center text-gray-600 font-bold shadow-lg">
+                  {currentSport.ambassador.name}
+                </div>
                 <h4 className="text-lg font-bold text-gray-900">{currentSport.ambassador.name}</h4>
                 <p className="text-gray-600 text-sm">Embajador {currentSport.ambassador.sport}</p>
               </div>

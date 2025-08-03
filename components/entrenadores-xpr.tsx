@@ -14,7 +14,7 @@ export default function EntrenadoresXPR() {
       nombre: "Hugo Mercau",
       especialidad: "CEO & Fundador XPR",
       deporte: "XPR Sports Experience",
-      foto: "/placeholder.svg?height=300&width=300",
+      foto: "/placeholder.svg?height=300&width=300&text=Hugo+Mercau",
       bio: "A lo largo de mi vida profesional me enfoqué en desarrollar negocios de distintos rubros: gastronómicos, desarrollistas, inmobiliarias, etc. dentro y fuera del país. En los últimos 20 años me he dedicado fuertemente al rubro del turismo, desarrollando el primer modelo de franquicias en Argentina generando la modificación de la ley de turismo a los fines de aceptar los sistemas de franquicias dentro del país.",
       logros: ["Fundador XPR Sports Experience", "Desarrollo primer modelo de franquicias turísticas en Argentina"],
     },
@@ -23,7 +23,7 @@ export default function EntrenadoresXPR() {
       nombre: "Javier Zanetti",
       especialidad: "Embajador Fútbol",
       deporte: "Football",
-      foto: "/placeholder.svg?height=300&width=300",
+      foto: "/placeholder.svg?height=300&width=300&text=Javier+Zanetti",
       bio: "Vicepresidente de Inter de Milán. Leyenda del fútbol mundial con una trayectoria excepcional.",
       logros: [
         "Vicepresidente de Inter de Milán",
@@ -38,7 +38,7 @@ export default function EntrenadoresXPR() {
       nombre: "Luis Scola",
       especialidad: "Embajador Básquet",
       deporte: "Basketball",
-      foto: "/placeholder.svg?height=300&width=300",
+      foto: "/placeholder.svg?height=300&width=300&text=Luis+Scola",
       bio: "CEO de Pallacanestro Varese. Leyenda del básquet argentino y mundial.",
       logros: [
         "CEO de Pallacanestro Varese",
@@ -53,7 +53,7 @@ export default function EntrenadoresXPR() {
       nombre: "Horacio Agulla",
       especialidad: "Embajador Rugby",
       deporte: "Rugby",
-      foto: "/placeholder.svg?height=300&width=300",
+      foto: "/placeholder.svg?height=300&width=300&text=Horacio+Agulla",
       bio: "Director de La Enseñada Polo Club. Leyenda del rugby argentino con una carrera excepcional.",
       logros: [
         "Director de La Enseñada Polo Club",
@@ -68,7 +68,7 @@ export default function EntrenadoresXPR() {
       nombre: "Pedro Ibarra",
       especialidad: "Embajador Hockey",
       deporte: "Hockey",
-      foto: "/placeholder.svg?height=300&width=300",
+      foto: "/placeholder.svg?height=300&width=300&text=Pedro+Ibarra",
       bio: "CEO de Ibarra Sports Management. Leyenda del hockey argentino y mundial.",
       logros: [
         "CEO de Ibarra Sports Management",
@@ -82,7 +82,7 @@ export default function EntrenadoresXPR() {
       nombre: "Marko Milinkovic",
       especialidad: "Embajador Vóley",
       deporte: "Volleyball",
-      foto: "/placeholder.svg?height=300&width=300",
+      foto: "/placeholder.svg?height=300&width=300&text=Marko+Milinkovic",
       bio: "Fundador Milinkovic Group. Leyenda del vóley argentino con una trayectoria empresarial destacada.",
       logros: [
         "Fundador Milinkovic Group",
@@ -158,11 +158,9 @@ export default function EntrenadoresXPR() {
                     <div className="relative h-full flex flex-col">
                       {/* Foto del entrenador */}
                       <div className="relative overflow-hidden">
-                        <img
-                          src={entrenador.foto || "/placeholder.svg"}
-                          alt={entrenador.nombre}
-                          className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                        />
+                        <div className="w-full h-64 bg-gray-200 flex items-center justify-center text-gray-600 font-bold group-hover:scale-110 transition-transform duration-500">
+                          {entrenador.nombre}
+                        </div>
                         {/* Overlay con especialidad */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
                         <div className="absolute bottom-4 left-4 text-white">
@@ -203,7 +201,7 @@ export default function EntrenadoresXPR() {
           {/* Mensaje motivacional */}
           <div className="text-center mt-16">
             <p className="text-lg text-gray-600 italic max-w-2xl mx-auto">
-              "La excelencia no es un acto, sino un hábito. Nuestros embajadores te guiarán en cada paso del camino."
+              La excelencia no es un acto, sino un hábito. Nuestros embajadores te guiarán en cada paso del camino.
             </p>
           </div>
         </div>

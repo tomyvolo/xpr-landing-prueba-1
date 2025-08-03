@@ -1,5 +1,3 @@
-import Image from "next/image"
-
 interface XPRLogoProps {
   variant?: "horizontal" | "vertical"
   size?: "sm" | "md" | "lg" | "xl"
@@ -23,17 +21,24 @@ export default function XPRLogo({ variant = "horizontal", size = "md", className
     },
   }
 
-  const logoSrc = variant === "horizontal" ? "/images/xpr-logo-horizontal.png" : "/images/xpr-logo-vertical.png"
+  const logoSrc =
+    variant === "horizontal"
+      ? "/placeholder.svg?height=42&width=160&text=XPR+Horizontal"
+      : "/placeholder.svg?height=120&width=200&text=XPR+Vertical"
   const dimensions = sizeMap[variant][size]
 
   return (
-    <Image
-      src={logoSrc || "/placeholder.svg"}
-      alt="XPR Sports Experience"
-      width={dimensions.width}
-      height={dimensions.height}
-      className={`${className} object-contain`}
-      priority
-    />
+    <div className={`${className} flex ${variant === "vertical" ? "flex-col" : "flex-row"} items-center`}>
+      <div className={`font-black ${variant === "vertical" ? "text-4xl" : "text-xl"} text-white tracking-wider`}>
+        <span className="text-blue-400">X</span>
+        <span className="text-orange-500">P</span>
+        <span className="text-green-500">R</span>
+      </div>
+      <div
+        className={`text-white text-xs font-medium tracking-widest opacity-90 ${variant === "vertical" ? "mt-2" : "ml-2"}`}
+      >
+        SPORTS EXPERIENCE
+      </div>
+    </div>
   )
 }

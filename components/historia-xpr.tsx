@@ -12,44 +12,44 @@ export default function HistoriaXPR() {
       year: "2018",
       title: "Los Inicios",
       description: "Hugo Mercau funda XPR con la visión de revolucionar la experiencia deportiva en Argentina.",
-      quote: '"Todo gran sueño comienza con un soñador"',
-      image: "/placeholder.svg?height=300&width=400",
+      quote: "Todo gran sueño comienza con un soñador",
+      image: "/placeholder.svg?height=300&width=400&text=2018+Inicios",
     },
     {
       year: "2019",
       title: "Primeros Embajadores",
       description: "Se suman Javier Zanetti y Luis Scola como embajadores, marcando el inicio de una nueva era.",
-      quote: '"La experiencia se comparte, la pasión se contagia"',
-      image: "/placeholder.svg?height=300&width=400",
+      quote: "La experiencia se comparte, la pasión se contagia",
+      image: "/placeholder.svg?height=300&width=400&text=2019+Embajadores",
     },
     {
       year: "2020",
       title: "Expansión Digital",
       description: "Durante la pandemia, XPR se adapta y lanza programas de entrenamiento virtual.",
-      quote: '"La adversidad revela el verdadero carácter"',
-      image: "/placeholder.svg?height=300&width=400",
+      quote: "La adversidad revela el verdadero carácter",
+      image: "/placeholder.svg?height=300&width=400&text=2020+Digital",
     },
     {
       year: "2021",
       title: "Campus XPR",
       description: "Inauguración del Campus XPR, instalaciones de clase mundial para la formación deportiva.",
-      quote: '"Construimos el futuro del deporte argentino"',
-      image: "/placeholder.svg?height=300&width=400",
+      quote: "Construimos el futuro del deporte argentino",
+      image: "/placeholder.svg?height=300&width=400&text=2021+Campus",
     },
     {
       year: "2022",
       title: "Crecimiento Multideporte",
       description:
         "Se incorporan Horacio Agulla, Pedro Ibarra y Marko Milinkovic, completando el equipo de embajadores.",
-      quote: '"Juntos somos más fuertes"',
-      image: "/placeholder.svg?height=300&width=400",
+      quote: "Juntos somos más fuertes",
+      image: "/placeholder.svg?height=300&width=400&text=2022+Multideporte",
     },
     {
       year: "2023",
       title: "Reconocimiento Internacional",
       description: "XPR es reconocida como la empresa de experiencias deportivas más innovadora de Latinoamérica.",
-      quote: '"La excelencia no tiene fronteras"',
-      image: "/placeholder.svg?height=300&width=400",
+      quote: "La excelencia no tiene fronteras",
+      image: "/placeholder.svg?height=300&width=400&text=2023+Internacional",
     },
   ]
 
@@ -115,11 +115,9 @@ export default function HistoriaXPR() {
                   <div className="bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl h-full flex flex-col">
                     {/* Imagen */}
                     <div className="flex-shrink-0 mb-4">
-                      <img
-                        src={item.image || "/placeholder.svg"}
-                        alt={item.title}
-                        className="w-full h-48 object-cover rounded-lg shadow-md"
-                      />
+                      <div className="w-full h-48 bg-gray-200 rounded-lg shadow-md flex items-center justify-center text-gray-600 font-bold">
+                        {item.year}
+                      </div>
                     </div>
 
                     {/* Contenido */}

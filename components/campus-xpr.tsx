@@ -9,22 +9,22 @@ export default function CampusXPR() {
 
   const campusImages = [
     {
-      src: "/placeholder.svg?height=600&width=800",
+      src: "/placeholder.svg?height=600&width=800&text=Instalaciones+XPR",
       alt: "Instalaciones deportivas del Campus XPR",
       type: "image",
     },
     {
-      src: "/placeholder.svg?height=600&width=800",
+      src: "/placeholder.svg?height=600&width=800&text=Gimnasio+XPR",
       alt: "Gimnasio cubierto Campus XPR",
       type: "image",
     },
     {
-      src: "/placeholder.svg?height=600&width=800",
+      src: "/placeholder.svg?height=600&width=800&text=Cancha+Futbol+XPR",
       alt: "Cancha de fútbol Campus XPR",
       type: "image",
     },
     {
-      src: "/placeholder.svg?height=600&width=800",
+      src: "/placeholder.svg?height=600&width=800&text=Video+Campus+XPR",
       alt: "Video institucional Campus XPR",
       type: "video",
     },
@@ -97,11 +97,9 @@ export default function CampusXPR() {
                   </div>
                 </div>
               ) : (
-                <img
-                  src={campusImages[currentImage].src || "/placeholder.svg"}
-                  alt={campusImages[currentImage].alt}
-                  className="w-full h-96 object-cover transition-transform duration-500"
-                />
+                <div className="w-full h-96 bg-gray-200 flex items-center justify-center text-gray-600 font-bold transition-transform duration-500">
+                  Campus XPR
+                </div>
               )}
 
               {/* Controles de navegación */}
@@ -157,11 +155,9 @@ export default function CampusXPR() {
                       </div>
                     </div>
                   ) : (
-                    <img
-                      src={image.src || "/placeholder.svg"}
-                      alt={image.alt}
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                    />
+                    <div className="w-full h-full bg-gray-200 flex items-center justify-center text-xs text-gray-600 hover:scale-110 transition-transform duration-300">
+                      Imagen {index + 1}
+                    </div>
                   )}
                 </button>
               ))}

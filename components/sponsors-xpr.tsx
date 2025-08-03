@@ -11,49 +11,49 @@ export default function SponsorsXPR() {
     {
       id: 1,
       name: "Nike",
-      logo: "/placeholder.svg?height=80&width=120",
+      logo: "/placeholder.svg?height=80&width=120&text=Nike",
       category: "Equipamiento Deportivo",
     },
     {
       id: 2,
       name: "Adidas",
-      logo: "/placeholder.svg?height=80&width=120",
+      logo: "/placeholder.svg?height=80&width=120&text=Adidas",
       category: "Indumentaria",
     },
     {
       id: 3,
       name: "Gatorade",
-      logo: "/placeholder.svg?height=80&width=120",
+      logo: "/placeholder.svg?height=80&width=120&text=Gatorade",
       category: "Hidratación",
     },
     {
       id: 4,
       name: "Under Armour",
-      logo: "/placeholder.svg?height=80&width=120",
+      logo: "/placeholder.svg?height=80&width=120&text=Under+Armour",
       category: "Tecnología Deportiva",
     },
     {
       id: 5,
       name: "Puma",
-      logo: "/placeholder.svg?height=80&width=120",
+      logo: "/placeholder.svg?height=80&width=120&text=Puma",
       category: "Calzado Deportivo",
     },
     {
       id: 6,
       name: "Wilson",
-      logo: "/placeholder.svg?height=80&width=120",
+      logo: "/placeholder.svg?height=80&width=120&text=Wilson",
       category: "Equipos Deportivos",
     },
     {
       id: 7,
       name: "Spalding",
-      logo: "/placeholder.svg?height=80&width=120",
+      logo: "/placeholder.svg?height=80&width=120&text=Spalding",
       category: "Pelotas y Accesorios",
     },
     {
       id: 8,
       name: "New Balance",
-      logo: "/placeholder.svg?height=80&width=120",
+      logo: "/placeholder.svg?height=80&width=120&text=New+Balance",
       category: "Calzado Técnico",
     },
   ]
@@ -108,11 +108,12 @@ export default function SponsorsXPR() {
                 key={sponsor.id}
                 className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center"
               >
-                <img
-                  src={sponsor.logo || "/placeholder.svg"}
-                  alt={sponsor.name}
-                  className="h-12 w-auto object-contain mb-3 grayscale hover:grayscale-0 transition-all duration-300"
-                />
+                <div
+                  className="h-12 w-auto object-contain mb-3 grayscale hover:grayscale-0 transition-all duration-300 bg-gray-200 rounded flex items-center justify-center text-xs font-bold text-gray-600"
+                  style={{ minWidth: "80px" }}
+                >
+                  {sponsor.name}
+                </div>
                 <h4 className="font-bold text-gray-900 text-sm text-center">{sponsor.name}</h4>
                 <p className="text-xs text-gray-500 text-center mt-1">{sponsor.category}</p>
               </div>

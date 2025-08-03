@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { ChevronDown } from "lucide-react"
-import XPRLogoSimple from "@/components/xpr-logo-simple"
+import XPRLogo from "@/components/xpr-logo"
 
 export default function HeroSectionXPR() {
   const handleScrollToSports = () => {
@@ -40,18 +40,18 @@ export default function HeroSectionXPR() {
 
         {/* Logo principal XPR - más abajo */}
         <div className="mb-16">
-          <XPRLogoSimple variant="vertical" size="xl" className="mx-auto" />
+          <XPRLogo variant="vertical" size="xl" className="mx-auto" />
         </div>
 
         {/* Eslogan motivacional */}
         <div className="mb-12">
           <h2 className="text-2xl md:text-4xl font-bold mb-4 leading-tight">
-            {"Entrená y conviví con las"}
+            Entrená y conviví con las
             <br />
-            <span className="text-blue-400">{"leyendas del deporte"}</span>
+            <span className="text-blue-400">leyendas del deporte</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            {"Estás a un paso de cambiar tu juego para siempre"}
+            Estás a un paso de cambiar tu juego para siempre
           </p>
         </div>
 

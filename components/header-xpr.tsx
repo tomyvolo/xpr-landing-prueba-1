@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Menu, X, Search, ShoppingCart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import XPRLogoSimple from "@/components/xpr-logo-simple"
+import XPRLogo from "@/components/xpr-logo"
 
 export default function HeaderXPR() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -38,7 +38,7 @@ export default function HeaderXPR() {
         <div className="flex items-center justify-between h-16">
           {/* Logo XPR - Versión horizontal real */}
           <button onClick={() => handleNavigation("#inicio")} className="flex items-center">
-            <XPRLogoSimple variant="horizontal" size="md" className="hover:opacity-80 transition-opacity" />
+            <XPRLogo variant="horizontal" size="md" className="hover:opacity-80 transition-opacity" />
           </button>
 
           {/* Navegación Desktop */}

@@ -2,44 +2,42 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import { sportEmbassadors } from "@/lib/brand-config"
-import { useRouter } from "next/navigation"
 
 interface SociosXPRProps {
   onSportClick?: (sport: "basquet" | "rugby" | "voley" | "hockey" | "futbol") => void
 }
 
 export default function SociosXPR({ onSportClick }: SociosXPRProps) {
-  const router = useRouter()
   const sports = [
     {
       id: "basquet",
       name: "Básquet",
       ambassador: sportEmbassadors.basquet,
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/placeholder.svg?height=400&width=600&text=Basquet+XPR",
     },
     {
       id: "rugby",
       name: "Rugby",
       ambassador: sportEmbassadors.rugby,
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/placeholder.svg?height=400&width=600&text=Rugby+XPR",
     },
     {
       id: "voley",
       name: "Vóley",
       ambassador: sportEmbassadors.voley,
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/placeholder.svg?height=400&width=600&text=Voley+XPR",
     },
     {
       id: "hockey",
       name: "Hockey",
       ambassador: sportEmbassadors.hockey,
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/placeholder.svg?height=400&width=600&text=Hockey+XPR",
     },
     {
       id: "futbol",
       name: "Fútbol",
       ambassador: sportEmbassadors.futbol,
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/placeholder.svg?height=400&width=600&text=Futbol+XPR",
     },
   ]
 
@@ -72,10 +70,8 @@ export default function SociosXPR({ onSportClick }: SociosXPRProps) {
             >
               <div className="relative h-full flex flex-col">
                 {/* Imagen del deporte - altura fija */}
-                <div
-                  className="h-48 bg-cover bg-center relative overflow-hidden flex-shrink-0"
-                  style={{ backgroundImage: `url(${sport.image})` }}
-                >
+                <div className="h-48 bg-cover bg-center relative overflow-hidden flex-shrink-0 bg-gray-200 flex items-center justify-center text-gray-600 font-bold">
+                  {sport.name}
                   {/* Overlay con color del deporte */}
                   <div
                     className="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity duration-300"
@@ -119,7 +115,7 @@ export default function SociosXPR({ onSportClick }: SociosXPRProps) {
         {/* Mensaje motivacional */}
         <div className="text-center mt-16">
           <p className="text-lg text-gray-600 italic max-w-2xl mx-auto">
-            "Nos respaldan las máximas leyendas del deporte"
+            Nos respaldan las máximas leyendas del deporte
           </p>
         </div>
       </div>

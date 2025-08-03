@@ -10,6 +10,7 @@ import HistoriaXPR from "@/components/historia-xpr"
 import ContactoXPR from "@/components/contacto-xpr"
 import ContactoFormSimple from "@/components/contacto-form-simple"
 import DeporteLanding from "@/components/deporte-landing"
+import SponsorsXPR from "@/components/sponsors-xpr"
 
 export default function XPRLanding() {
   // Smooth scroll para navegación
@@ -63,6 +64,7 @@ export default function XPRLanding() {
             </section>
 
             <SociosXPR onSportClick={handleSportClick} />
+            <SponsorsXPR />
             <CampusXPR />
             <EntrenadoresXPR />
             <HistoriaXPR />
